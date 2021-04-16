@@ -5,6 +5,7 @@ yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyooooooOOOoo taht's hot
 rtgrgrr gth
 yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooooooo taht's hot
 grgr
+<<<<<<< HEAD
 >>>>>>> 13859133ab5dbdfa3355ed2858e2f78f46cde216
 
 rtgrgrr gth
@@ -16,3 +17,6 @@ rtgrgrr gth
 yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyoooooooo taht's hot
 grgr
 >>>>>>> 13859133ab5dbdfa3355ed2858e2f78f46cde216
+=======
+hefiufhciudshfs
+>>>>>>> a167cea25c1c5b90de7d3b99753f476cd585879d
