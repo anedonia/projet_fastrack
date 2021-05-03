@@ -30,5 +30,18 @@
             break;
         }
     }
-    include('../view/login.php');
+    //include('../view/login.php');
+
+    	if (!isset($_POST["action"]))
+	{
+		include("../view/login.php");
+	}
+
+	switch ($_POST["action"]) {
+		case  'questions.php':
+			include("questions.php");
+			break;
+				
+	}
+
 ?> 
