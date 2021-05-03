@@ -13,7 +13,7 @@
             <?php
             break;
 
-            case 'email':
+            case 'user':
             ?>
                 <div class="erreur">
                     <strong>Erreur</strong> Username incorrect
