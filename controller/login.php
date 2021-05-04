@@ -1,10 +1,8 @@
 <?php
 
+    include './model/login.php';
 
-
-
-
-
+    print_r($_POST);
 
     $page_css = "\"./public/style_login.css\"";
     $title = "login";
@@ -14,6 +12,6 @@
     $content = ob_get_clean();
 
     $content = "bite";
-    require('view/login.php');
+    require('./view/login.php');
 ?>    
     

@@ -1,7 +1,6 @@
 
 
 <?php
-    //include('../view/login.php');
 	try 
 	{
 			if (!isset($_POST["action"]) || !isset($_SESSION))

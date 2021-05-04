@@ -1,11 +1,9 @@
-<?php
-
- require 'header.php'?>
+<?php require 'header.php'?>
 
 <div id="container">
             <!-- zone de connexion -->
             
-            <form action="verification.php" method="POST">
+            <form action="./index.php" method="POST">
                 <h1>Connexion</h1>
                 
                 <label><b>Nom d'utilisateur</b></label>
@@ -16,10 +14,14 @@
 
                 <input type="submit" id='submit' value='LOGIN' >
                 <?php
+
+                
+
                 if(isset($_GET['erreur'])){
                     $err = $_GET['erreur'];
                     if($err==1 || $err==2)
                         echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    
                 }
                 ?>
             </form>
