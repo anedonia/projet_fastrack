@@ -5,6 +5,6 @@
 
 
 
-    require('../view/login.php');
+    require('view/login.php');
 ?>    
     
