@@ -6,7 +6,7 @@
 	{
 			if (!isset($_POST["action"]) || !isset($_SESSION))
 		{
-			include("../view/login.php");
+			include("../controller/login.php");
 			//ici login du controler le ../view/login est temporaire
 		}
 		else 
