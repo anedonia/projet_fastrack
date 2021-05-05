@@ -15,6 +15,4 @@ function bdd($requete){
         die;
     }
 }
-//INSERT INTO `user` (`id_user`, `prenom`, `nom`, `identifiant`, `mdp`, `mail`, `role`) VALUES ('2', NULL, NULL, 'azomu', 'jaimelesfraises', NULL, NULL);
-
 ?>
