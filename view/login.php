@@ -25,6 +25,9 @@
                 }
                 ?>
             </form>
+            <form action="./index.php" method="POST">
+                <input type="submit" id='submit' value='REGISTER' >
+            </form>
         </div>
 
 <?php require 'footer.php'?> 
