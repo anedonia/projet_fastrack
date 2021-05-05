@@ -23,7 +23,7 @@
             ?>
         </form>
         <form action="./index.php" method="POST">
-            <input type="submit" id='submit' value='inscription.php' name='action' >
+            <input type="submit" id='submit' value='INSCRIPTION' name='action' >
         </form>
     </div>
 </div>
