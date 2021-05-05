@@ -3,7 +3,7 @@
 <?php
 	try 
 	{
-			if (!isset($_POST["action"]) || !isset($_SESSION))
+			if (!isset($_POST["action"]))
 		{
 			include("./controller/login.php");
 			//ici login du controler le ../view/login est temporaire
@@ -12,8 +12,7 @@
 		{    
 			switch ($_POST["action"]) {
 				case  'inscription.php':
-					
-					include("../controller/register.php");
+					include("./controller/register.php");
 					break;
 				case  'questions.php':
 					include("../view/inscription.php");

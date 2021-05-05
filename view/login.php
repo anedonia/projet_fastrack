@@ -26,7 +26,7 @@
                 ?>
             </form>
             <form action="./index.php" method="POST">
-                <input type="submit" id='submit' value='REGISTER' >
+                <input type="submit" id='submit' value='inscription.php' name='action' >
             </form>
         </div>
 
