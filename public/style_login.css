@@ -1,13 +1,12 @@
 body{
     background: #2c2c2c;
 }
-#container{
+#all{
     width:400px;
     margin:0 auto;
     margin-top:10%;
 }
-/* Bordered form */
-form {
+#container{
     width:100%;
     padding: 30px;
     border: 1px solid #131313;
@@ -15,6 +14,7 @@ form {
     box-shadow: 0 0 20px 0 rgb(0, 0, 0), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     border-radius: 10px;
 }
+/* Bordered form */
 #container h1{
     width: 38%;
     margin: 0 auto;
