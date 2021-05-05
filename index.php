@@ -13,7 +13,7 @@
 			switch ($_POST["action"]) {
 				case  'inscription.php':
 					
-					include("../view/inscription.php");
+					include("../controller/register.php");
 					break;
 				case  'questions.php':
 					include("../view/inscription.php");
@@ -34,4 +34,4 @@
 	{
 		echo 'Erreur : '. $e->getMessage();
 	}
-  
+?>
