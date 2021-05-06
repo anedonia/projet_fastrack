@@ -2,20 +2,21 @@
 
     require_once('./model/login.php');
 
-    if (isset($_POST['password']) && $_POST['username'])
+    if (isset($_GET['password']) && $_GET['username'])
     {
-        if (user_check($_POST['password'] ,$_POST['username']))
+        if (user_check($_GET['password'] ,$_GET['username']))
         {
             //echo 'connecté';
 
-            $client = user_info($_POST['username']);
+            $client = user_info($_GET['username']);
 
             foreach(array('id_user','prenom','nom','identifiant','mail','role') as $key )
             {
                 $_SESSION[$key] = $client[$key];
             }
             
-            header('Location:index.php');
+            header('Location: index.php?action=shop');
+            exit();
         }
     }
 

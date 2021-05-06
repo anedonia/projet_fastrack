@@ -3,19 +3,18 @@
 <?php
 session_start();
 
-print_r($_POST);
-print_r($_SESSION);
-
+var_dump($_GET);
+var_dump($_SESSION);
 
 	try 
 	{
-		if (!isset($_POST["action"]))
+		if (!isset($_GET['action']))
 		{
-			include("./controller/login.php");
+			include('./controller/login.php');
 		}
 		else 
-		{    
-			switch ($_POST["action"]) {
+		{
+			switch ($_GET["action"]) {
 
 				case  'LOGIN':
 					include("./controller/login.php");
@@ -30,14 +29,16 @@ print_r($_SESSION);
 					include("./controller/shop.php");
 					break;
 				case  'news.php':
-					include("../view/inscription.php");
+					include("./view/inscription.php");
 					break;
 				case  'cd.php':
-					include("../view/inscription.php");
+					include("./view/inscription.php");
 					break;
 				case  'about.php':
-					include("../view/inscription.php");
+					include("./view/inscription.php");
 					break;
+				default :
+					include("./controller/login.php");
 			}
 		}
 	}

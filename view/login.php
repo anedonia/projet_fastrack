@@ -4,7 +4,7 @@
     <div id="container">
         <!-- zone de connexion -->
         
-        <form action="./index.php" method="POST">
+        <form action="./index.php" method="GET">
             <h1>Connexion</h1>
             
             <label><b>Nom d'utilisateur</b></label>
@@ -25,11 +25,11 @@
             ?>
         </form>
 
-        <form action="./index.php" method="POST">
+        <form action="./index.php" method="GET">
 				<input id='submit' type="submit" value="sign_out" name="action">
 		</form>
 
-        <form action="./index.php" method="POST">
+        <form action="./index.php" method="GET">
             <input type="submit" id='submit' value='INSCRIPTION' name='action' >
         </form>
     </div>
