@@ -18,8 +18,8 @@ session_start();
 				case 'sign_out':
 					include("./controller/sign_out.php");
 					break;
-				case  'questions.php':
-					include("../view/inscription.php");
+				case  'shop':
+					include("./controller/shop.php");
 					break;
 				case  'news.php':
 					include("../view/inscription.php");
