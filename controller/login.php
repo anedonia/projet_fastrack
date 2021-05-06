@@ -1,12 +1,12 @@
 <?php
 
-    require('./model/login.php');
+    require_once('./model/login.php');
 
     if (isset($_POST['password']) && $_POST['username'])
     {
         if (user_check($_POST['password'] ,$_POST['username']))
         {
-            echo 'connecté';
+            //echo 'connecté';
 
             $client = user_info($_POST['username']);
 
@@ -15,18 +15,14 @@
                 $_SESSION[$key] = $client[$key];
             }
 
-            print_r($_SESSION);
+            header('Location: controller/shop.php');
+            
         }
     }
-    
+
     $page_css = "\"./public/style_login.css\"";
     $title = "login";
 
-    ob_start();
-   
-    $content = ob_get_clean();
-
-    $content = "";
-    require('./view/login.php');
+    $content="";
+    require_once('./view/login.php');
 ?>    
-    

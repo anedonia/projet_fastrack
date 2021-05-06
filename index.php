@@ -2,16 +2,22 @@
 
 <?php
 session_start();
+
+print_r($_POST);
+//print_r($_SESSION);
 	try 
 	{
-			if (!isset($_POST["action"]))
+		if (!isset($_POST["action"]))
 		{
 			include("./controller/login.php");
-			//ici login du controler le ../view/login est temporaire
 		}
 		else 
 		{    
 			switch ($_POST["action"]) {
+
+				case  'LOGIN':
+					include("./controller/login.php");
+					break;
 				case  'INSCRIPTION':
 					include("./controller/register.php");
 					break;

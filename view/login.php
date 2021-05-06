@@ -13,7 +13,8 @@
             <label><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
-            <input type="submit" id='submit' value='LOGIN' >
+            <input type="submit" id='submit' name='action' value='LOGIN' >
+            
             <?php
             if(isset($_GET['erreur'])){
                 $err = $_GET['erreur'];
@@ -23,6 +24,11 @@
             }
             ?>
         </form>
+
+        <form action="./index.php" method="POST">
+				<input id='submit' type="submit" value="sign_out" name="action">
+		</form>
+
         <form action="./index.php" method="POST">
             <input type="submit" id='submit' value='INSCRIPTION' name='action' >
         </form>
