@@ -28,9 +28,9 @@
                 <a href='#' onclick='document.getElementById("shop").submit()'>Shop</a>
 
                 <form id="game" action="./index.php" method='GET'>
-                    <input type="hidden" name="action" value="game"/>
+                    <input type="hidden" name="action" value="accueil"/>
                 </form>
-                <a href='#' onclick='document.getElementById("game").submit()'>Blind test</a>
+                <a href='#' onclick='document.getElementById("game").submit()'>Accueil</a>
 
                 <form id="account" action="./index.php" method='GET'>
                     <input type="hidden" name="action" value="account"/>

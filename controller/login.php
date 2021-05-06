@@ -15,7 +15,7 @@
                 $_SESSION[$key] = $client[$key];
             }
             
-            header('Location: index.php?action=shop');
+            header('Location: index.php?action=accueil');
             exit();
         }
     }

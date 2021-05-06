@@ -25,8 +25,8 @@ session_start();
 				case  'shop':
 					include("./controller/shop.php");
 					break;
-				case  'news.php':
-					include("./view/inscription.php");
+				case  'accueil':
+					include("./controller/accueil.php");
 					break;
 				case  'cd.php':
 					include("./view/inscription.php");
