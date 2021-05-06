@@ -12,8 +12,9 @@ if(!empty($_POST['password']) AND !empty($_POST['username'])){
         echo 'bite2';
     }
     var_dump(bdd("SELECT `id_user` FROM `user`"));
-    bdd("INSERT INTO `user` (`id_user`, `prenom`, `nom`, `identifiant`, `mdp`, `mail`, `role`) VALUES (".$id_client.", NULL, NULL, '".$_POST['username']."', '".$_POST['password']."', NULL, NULL);");
+    bdd("INSERT INTO `user` (`id_user`, `prenom`, `nom`, `identifiant`, `mdp`, `mail`, `role`) VALUES (".$id_client.", '".$_POST['first_name']."', '".$_POST['full_name']."', '".$_POST['username']."', '".$_POST['password']."', '".$_POST['email']."', NULL);");
     $_POST['action'] = '';
+    setcookie("account_created", True, time()+20);
     header('Location: index.php');
     exit();
 }

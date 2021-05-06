@@ -11,7 +11,7 @@
 		else 
 		{    
 			switch ($_POST["action"]) {
-				case  'inscription.php':
+				case  'INSCRIPTION':
 					include("./controller/register.php");
 					break;
 				case  'questions.php':
