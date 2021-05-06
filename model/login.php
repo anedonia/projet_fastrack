@@ -39,7 +39,7 @@
     {
         $bdd = db_connect();
 
-        $sql = 'SELECT id_user,prenom,nom,mail,role  FROM user WHERE identifiant = ?';
+        $sql = 'SELECT id_user,prenom,nom,identifiant,mail,role  FROM user WHERE identifiant = ?';
         $req = $bdd -> prepare ($sql);
         $req->execute([$identifiant]);
 

@@ -10,10 +10,11 @@
 
             $client = user_info($_POST['username']);
 
-            foreach(array('id_user','prenom','nom','mail','role') as $key )
+            foreach(array('id_user','prenom','nom','identifiant','mail','role') as $key )
             {
                 $_SESSION[$key] = $client[$key];
             }
+
             print_r($_SESSION);
         }
     }
