@@ -1,9 +1,12 @@
 <?php
 
-    include './model/login.php';
+    include('./model/login.php');
 
-    print_r($_POST);
-
+    if (isset($_POST['mdp']) && $_POST['identifiant'])
+    {
+        user_check($_POST['mdp'] ,$_POST['identifiant']);
+    }
+    
     $page_css = "\"./public/style_login.css\"";
     $title = "login";
 

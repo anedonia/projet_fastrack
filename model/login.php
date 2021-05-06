@@ -7,9 +7,9 @@
     {
         try
         {
-            $pdo = new PDO('mysql:host=localhost;dbname=lib_4','root','');
+            $pdo = new PDO('mysql:host=localhost;dbname=fastrack','root','');
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
-
+            echo 'connextion réussie';
             return $pdo;
         }
         catch (PDOException $e)
@@ -22,12 +22,26 @@
     {
         $bdd = db_connect();
 
-        $req = $bdd->query('SELECT id FROM user WHERE mdp = SHA1(:mdp) AND identifiant :identifiant');
+        $sql = $bdd->query('SELECT id_user FROM user WHERE identifiant = :identifiant)');
+        $req = $bdd -> prepare ($sql) ;
+        $req->execute(['identifiant' => $identifiant]);
+
+
+        print_r($row);
+    }
+
+
+
+/*
+    {
+        $bdd = db_connect();
+
+        $sql = $bdd->query('SELECT id_user FROM user WHERE (mdp = SHA1(:mdp) AND identifiant = :identifiant)');
         $req = $bdd->prepare($sql);
         $req->execute(['mdp' => $mdp ,'identifiant' => $identifiant]);
 
         var_dump($req);
     }
 
-
+*/
 
