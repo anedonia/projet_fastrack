@@ -1,8 +1,5 @@
 <?php
 
-
-
-
     function db_connect()
     {
         try
@@ -37,18 +34,16 @@
         }
     }
 
-
-
-/*
+    //fonction qui récupère les infos du client (sauf le hash du mdp)
+    function user_info($identifiant)
     {
         $bdd = db_connect();
 
-        $sql = $bdd->query('SELECT id_user FROM user WHERE (mdp = SHA1(:mdp) AND identifiant = :identifiant)');
-        $req = $bdd->prepare($sql);
-        $req->execute(['mdp' => $mdp ,'identifiant' => $identifiant]);
+        $sql = 'SELECT id_user,prenom,nom,mail,role  FROM user WHERE identifiant = ?';
+        $req = $bdd -> prepare ($sql);
+        $req->execute([$identifiant]);
 
-        var_dump($req);
+        $data = $req->fetch();
+              
+        return $data;
     }
-
-*/
-

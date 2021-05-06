@@ -7,6 +7,14 @@
         if (user_check($_POST['password'] ,$_POST['username']))
         {
             echo 'connecté';
+
+            $client = user_info($_POST['username']);
+
+            foreach(array('id_user','prenom','nom','mail','role') as $key )
+            {
+                $_SESSION[$key] = $client[$key];
+            }
+            print_r($_SESSION);
         }
     }
     
