@@ -5,7 +5,7 @@ require('view\header.php');
     <div id="container">
             <!-- zone de d'enregistrement -->
             
-        <form action="./index.php" method="POST">
+        <form action="./index.php" method="GET">
             <h1>Register</h1>
             
             <label><b>Nom d'utilisateur</b></label>
