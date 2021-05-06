@@ -1,10 +1,11 @@
 <?php
 
-    include('./model/login.php');
+    require('./model/login.php');
 
-    if (isset($_POST['mdp']) && $_POST['identifiant'])
+    if (isset($_POST['password']) && $_POST['username'])
     {
-        user_check($_POST['mdp'] ,$_POST['identifiant']);
+        //echo 'pénétration';
+        user_check($_POST['password'] ,$_POST['username']);
     }
     
     $page_css = "\"./public/style_login.css\"";
@@ -14,7 +15,7 @@
    
     $content = ob_get_clean();
 
-    $content = "bite";
+    $content = "";
     require('./view/login.php');
 ?>    
     

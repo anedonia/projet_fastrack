@@ -1,7 +1,6 @@
 
 
 <?php
-	var_dump($_POST);
 	try 
 	{
 			if (!isset($_POST["action"]))
