@@ -1,12 +1,3 @@
-<?php
-    $page_css = "\"./public/style_shop.css\"";
-    $title = "shop";
-    ob_start();
-    //ici
-    var_dump($_POST);
-    $content = ob_get_clean();
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
