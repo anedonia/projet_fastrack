@@ -1,6 +1,7 @@
 
 
 <?php
+	var_dump($_POST);
 	try 
 	{
 			if (!isset($_POST["action"]))
@@ -13,6 +14,9 @@
 			switch ($_POST["action"]) {
 				case  'INSCRIPTION':
 					include("./controller/register.php");
+					break;
+				case 'sign_out':
+					include("./controller/sign_out.php");
 					break;
 				case  'questions.php':
 					include("../view/inscription.php");
