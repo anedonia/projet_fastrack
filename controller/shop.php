@@ -7,6 +7,6 @@ print_r($_POST);
 ob_start();
 //ici
 $content = ob_get_clean();
-require('..\view\shop.php');
+require('.\view\shop.php');
 
 ?>

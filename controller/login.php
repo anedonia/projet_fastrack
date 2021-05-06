@@ -1,5 +1,5 @@
 <?php
-    session_start();
+
     require_once('./model/login.php');
 
     if (isset($_POST['password']) && $_POST['username'])
@@ -14,7 +14,7 @@
             {
                 $_SESSION[$key] = $client[$key];
             }
-            $_POST['mdr']= 'lol';
+            
             header('Location:index.php');
         }
     }
