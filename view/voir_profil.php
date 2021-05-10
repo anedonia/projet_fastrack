@@ -88,23 +88,23 @@
         <table class="user_info">
             <tr>
                 <td>Firstname</td>
-                <td> :</td> 
+                <td>: <?= $_SESSION['nom'] ?></td> 
             </tr>
             <tr>
                 <td>Lastname</td>
-                <td>:</td>
+                <td>: <?= $_SESSION['prenom'] ?></td>
             </tr>
             <tr>
                 <td>User Id</td>
-                <td>:</td>
+                <td>: <?= $_SESSION['identifiant'] ?></td>
             </tr>
             <tr>
                 <td>Mail</td>
-                <td>: mega chibre</td>
+                <td>: <?= $_SESSION['mail'] ?></td>
             </tr>
             <tr>
                 <td>Rôle</td>
-                <td>:</td>
+                <td>: <?= $_SESSION['role'] ?></td>
             </tr>
             </table>
     </div>
