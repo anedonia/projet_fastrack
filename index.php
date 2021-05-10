@@ -28,8 +28,8 @@ session_start();
 				case  'accueil':
 					include("./controller/accueil.php");
 					break;
-				case  'cd.php':
-					include("./view/inscription.php");
+				case  'account':
+					include("./controller/voir_profil.php");
 					break;
 				case  'about.php':
 					include("./view/inscription.php");

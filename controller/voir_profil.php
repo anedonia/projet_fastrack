@@ -5,11 +5,11 @@ if (empty($_SESSION['id_user'])){
 }
 
 $page_css = "\"./public/style_profil.css\"";
-$title = "Shop";
+$title = "account";
 
 ob_start();
 //ici
 $content = ob_get_clean();
-require('.\view\shop.php');
+require('.\view\voir_profil.php');
 
 ?>
