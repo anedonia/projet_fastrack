@@ -20,8 +20,18 @@
     {
         $bdd = db_connect();
 
-        $sql = 'SELECT (select titre from stock where id_musique = id_musique) as titre, quantite, prix  from ligne_commande where etat = "wait" and 
-        id_commande = ( SELECT id_commande from commande where id_user = ?)';
+        $sql = 'SELECT (
+        select titre 
+        from stock 
+        where id_musique = id_musique) as titre, 
+        quantite, prix 
+
+        from ligne_commande 
+        where etat = "wait" and id_commande =(
+        SELECT id_commande 
+        from commande 
+        where id_user= ? and total is null)';     //le total n'est set que quand on passe la commande (filtrage)
+
         $req = $bdd -> prepare ($sql) ;
         $req->execute([$user_id]);
 
