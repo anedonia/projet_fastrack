@@ -50,29 +50,23 @@
                 <!-- j'ai trouvé cette strat sur un forum c'est vraiment trop bien, en gros c'est le bouton
                 c'est un href qui appelle un input invisible donc comme un input submit-->
 
-                <form id="shop" action="./index.php" method='GET'>
-                    <input type="hidden" name="action" value="shop"/>
+                <form id="voir_achat" action="./index.php" method='GET'>
+                    <input type="hidden" name="action" value="voir_achat"/>
                 </form>
-                <a href='#' onclick='document.getElementById("shop").submit()'>Shop</a>
+                <a href='#' onclick='document.getElementById("shop").submit()'>Achats</a>
 
-                <form id="game" action="./index.php" method='GET'>
-                    <input type="hidden" name="action" value="accueil"/>
+                <form id="cart" action="./index.php" method='GET'>
+                    <input type="hidden" name="action" value="cart"/>
                 </form>
-                <a href='#' onclick='document.getElementById("game").submit()'>Accueil</a>
+                <a href='#' onclick='document.getElementById("cart").submit()'>Cart</a>
 
-                <form id="account" action="./index.php" method='GET'>
-                    <input type="hidden" name="action" value="account"/>
+                <form id="modifier_profil" action="./index.php" method='GET'>
+                    <input type="hidden" name="action" value="modifier_profil"/>
                 </form>
-                <a href='#' onclick='document.getElementById("account").submit()'>Account</a>
+                <a href='#' onclick='document.getElementById("modifier_profil").submit()'>Modifier profil</a>
 
-                <form id="sign_out" action="./index.php" method='GET'>
-                    <input type="hidden" name="action" value="sign_out"/>
-                </form>
-                <a href='#' onclick='document.getElementById("sign_out").submit()'>Sign Out</a>
+                <?= $content ?>
 
-                <form id="sign_out" action="./index.php" method='GET'>
-                    <input type="hidden" name="action" value="sign_out"/>
-                </form>
                 <form id="supprimer_compte" action="./index.php" method='GET'>
                     <input type="hidden" name="action" value="supprimer_compte"/>
                 </form>
