@@ -15,7 +15,7 @@
         }
     }
 
-    //fonction qui renvoie true si le combo mdp / username existe dans la db
+    //fonction qui return le titre / quantité / le prix de chauqe ligne commande sous forme de tab assoc
     function formulation_cart($user_id)
     {
         $bdd = db_connect();

@@ -102,6 +102,9 @@
             </tr>
             </table>
     </div>
+
+    <?= $content ?>
+
     
 </body>
 </html>
