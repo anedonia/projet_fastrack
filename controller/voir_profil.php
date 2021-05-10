@@ -6,6 +6,10 @@ if (empty($_SESSION['id_user'])){
 
 $page_css = "\"./public/style_profil.css\"";
 $title = "account";
+$jour_mois = date("m.d.y");
+
+$heure = date("H:i");
+                       
 
 ob_start();
 //ici
