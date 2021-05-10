@@ -76,35 +76,7 @@
         </form>
     </div>
 
-    <div class="center_container">
-        <p>Nous sommes le <?= $jour_mois ?> il est <?= $heure ?></p>  
+    <?= $html_cart ?>
 
-        <table class="user_info">
-            <tr>
-                <td>Firstname</td>
-                <td>: <?= $_SESSION['nom'] ?></td> 
-            </tr>
-            <tr>
-                <td>Lastname</td>
-                <td>: <?= $_SESSION['prenom'] ?> Bite </td>
-            </tr>
-            <tr>
-                <td>User Id</td>
-                <td>: <?= $_SESSION['identifiant'] ?></td>
-            </tr>
-            <tr>
-                <td>Mail</td>
-                <td>: <?= $_SESSION['mail'] ?></td>
-            </tr>
-            <tr>
-                <td>Rôle</td>
-                <td>: <?= $_SESSION['role'] ?></td>
-            </tr>
-            </table>
-    </div>
-
-    <?= $content ?>
-
-    
 </body>
 </html>
