@@ -86,7 +86,7 @@
             </tr>
             <tr>
                 <td>Lastname</td>
-                <td>: <?= $_SESSION['prenom'] ?></td>
+                <td>: <?= $_SESSION['prenom'] ?> Bite </td>
             </tr>
             <tr>
                 <td>User Id</td>

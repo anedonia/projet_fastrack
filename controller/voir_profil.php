@@ -24,7 +24,13 @@ ob_start();
                 <a href='#' onclick='document.getElementById("Upload").submit()'>Upload</a>
 <?php
 $content = ob_get_clean();
-if ($_SESSION['role'])
+
+//limitation des options en fonction des roles 
+if ($_SESSION['role'] !== "vendeur")
+{
+    $content = "";
+}
+
 require('.\view\voir_profil.php');
 
 ?>
