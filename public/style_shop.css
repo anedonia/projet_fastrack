@@ -38,7 +38,7 @@ html {
   justify-content: start;
   align-content: start;
   padding: 6rem;
-  background-color: #ffffff;
+  background-color: rgb(181, 181, 181);
   font-family: "Inter", sans-serif;
 }
 @media (max-width: 60em) {

@@ -50,17 +50,16 @@
                 <!-- j'ai trouvé cette strat sur un forum c'est vraiment trop bien, en gros c'est le bouton
                 c'est un href qui appelle un input invisible donc comme un input submit-->
 
-                
-
-                <form id="cart" action="./index.php" method='GET'>
-                    <input type="hidden" name="action" value="cart"/>
-                </form>
-                <a href='' onclick='document.getElementById("cart").submit()'>Cart</a>
 
                 <form id="voir_achat" action="./index.php" method='GET'>
                     <input type="hidden" name="action" value="voir_achat"/>
                 </form>
                 <a href='#' onclick='document.getElementById("voir_achat").submit()'>Achats</a>
+
+                <form id="cart" action="./index.php" method='GET'>
+                    <input type="hidden" name="action" value="cart"/>
+                </form>
+                <a href='' onclick='document.getElementById("cart").submit()'>Cart</a>
 
                 <form id="modifier_profil" action="./index.php" method='GET'>
                     <input type="hidden" name="action" value="modifier_profil"/>
