@@ -25,6 +25,9 @@
   color: white;
 }
 
+
+
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -32,8 +35,8 @@ html {
 
 .grid {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-content: start;
+  align-content: start;
   padding: 6rem;
   background-color: #ffffff;
   font-family: "Inter", sans-serif;
@@ -46,9 +49,8 @@ html {
 
 .grid {
   display: grid;
-  width: 114rem;
   grid-gap: 6rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 30rem));
   align-items: start;
 }
 @media (max-width: 60em) {
@@ -71,7 +73,7 @@ html {
 
 .card__img {
   display: block;
-  width: 80%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }

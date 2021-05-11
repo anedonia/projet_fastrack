@@ -48,7 +48,7 @@
     <tr class='tr1'>
         
         <div class="grid">
-        <div class="grid__item">
+            <div class="grid__item">
                 <div class="card"><img class="card__img" src=".\asset\drilfr4.jpg" alt="Snowy Mountains">
                     <div class="card__content">
                         <h1 class="card__header">DRILL FR 4</h1>
