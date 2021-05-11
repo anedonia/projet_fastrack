@@ -57,28 +57,9 @@
                     </div>
                 </div>
             </div>
-            <div class="grid__item">
-                <div class="card"><img class="card__img" src=".\asset\drilfr4.jpg" alt="Snowy Mountains">
-                    <div class="card__content">
-                        <h1 class="card__header">DRILL FR 4</h1>
-                        <p class="card__text"><strong>ecouter la musique ici</strong></p>
-                        <button class="card__btn">ajouter au panier<span>&rarr;</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__item">
-                <div class="card"><img class="card__img" src=".\asset\drilfr4.jpg" alt="Snowy Mountains">
-                    <div class="card__content">
-                        <h1 class="card__header">DRILL FR 4</h1>
-                        <p class="card__text"><strong>ecouter la musique ici</strong></p>
-                        <button class="card__btn">ajouter au panier<span>&rarr;</span></button>
-                    </div>
-                </div>
-            </div>
-            
+            <?= $content ?>
         </div>
-
-        <?= $content ?>
+        
     </tr>
 </table>
 </body>
