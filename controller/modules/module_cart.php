@@ -13,16 +13,37 @@ function show_cart($cart)
     "<div class=\"center_container\">
         <p>Nous sommes le ".date("m.d.y")." il est ".date("H:i")."</p>  
 
-        <table class=\"user_info\">");
+        <table class=\"user_info\">
+        <tr>
+                <td> Titre </td>
+                <td> Quantite </td> 
+                <td> Prix </td> 
+            </tr>");
 
-	for ($i=0;$i < count($cart); $i++) 
+    $total =0;
+
+	for ($i=0;$i < count($cart)+1; $i++) 
 	   {
+           if ($i < count($cart))
+           {
 	    	array_push($tab_html,
             "<tr>
                 <td>".$cart[$i]['titre']."</td>
                 <td>".$cart[$i]['quantite']."</td> 
-                <td>".$cart[$i]['prix']."</td> 
+                <td>".$cart[$i]['prix']*$cart[$i]['quantite']." € </td> 
             </tr>");
+
+            $total += $cart[$i]['prix']*$cart[$i]['quantite'];
+           }
+           else 
+           {
+            array_push($tab_html,
+            "<tr>
+                <td>Total</td>
+                <td>: </td> 
+                <td>".$total." € </td> 
+            </tr>");
+           }
 	   }
     array_push($tab_html,
         "</table>
