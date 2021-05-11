@@ -8,11 +8,15 @@ $page_css = "\"./public/style_shop.css\"";
 $title = "Shop";
 //echo affichage_items(8, 'lunedefiel', 99.99, "la baise");
 
-ob_start();
-    echo affichage_items(7, 'lunedefiel', '99.99', 'la baise');
-    echo affichage_items(8, 'lunedefiel', '99.99', 'la baise');
-$content = ob_get_clean();
+$stock = bdd('SELECT * FROM `stock`');
 
+ob_start();
+
+foreach ($stock as $track){
+    echo affichage_item($track['id_musique'], $track['titre'], $track['prix'], $track['description']);
+}
+
+$content = ob_get_clean();
 require('.\view\shop.php');
 
 ?>
