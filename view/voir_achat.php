@@ -78,7 +78,7 @@
         </form>
     </div>
 
-    <?= $html_cart ?>
+    <?= $html_achats ?>
 
 </body>
 </html>

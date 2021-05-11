@@ -4,7 +4,7 @@ if (empty($_SESSION['id_user'])){
     exit();
 }
 require_once('./model/voir_achat.php');
-//require_once('modules/module_cart.php');
+require_once('modules/module_achat.php');
 
 
 
@@ -37,5 +37,11 @@ if ($_SESSION['role'] !== "vendeur")
     $content = "";
 }
 
+print_r(commande($_SESSION['id_user']));
+$commandes = commande($_SESSION['id_user']);
+
+$html_achats = commande_show($commandes);
+
+print_r(contenu_commande($commandes[0]['id_commande']));
 
 require('.\view\voir_achat.php');
