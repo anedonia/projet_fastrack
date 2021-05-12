@@ -53,8 +53,9 @@ function affichage_item($id_image, $titre, $prix, $description){
                 <p class="card__text"><strong>'.$prix.'€</strong><br>'.$description.'</p>
 
                 <form id="'.$id_image.'" action="./index.php" method="GET">
-                    <input type="hidden" name="action" value="acheter"/>
+                    <input type="hidden" name="action" value="shop"/>
                     <input type="hidden" name="id" value="'.$id_image.'"/>
+                    <input type="hidden" name="ajout" value="yes"/>
                 </form>
                 <a href="#" class="card__btn" onclick='.$onclick.'>ajouter au panier<span>&rarr;</span></a>
             </div>
