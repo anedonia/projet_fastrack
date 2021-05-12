@@ -11,7 +11,7 @@
 <body>
     <table class="tab2">
         <tr>
-            <form action="./index.php" method="POST">
+            
                 <div class="topnav">
                     <!-- j'ai trouvé cette strat sur un forum c'est vraiment trop bien, en gros c'est le bouton
                     c'est un href qui appelle un input invisible donc comme un input submit-->
@@ -41,11 +41,10 @@
                     <a href='#' onclick='document.getElementById("sign_out").submit()'>Sign Out</a>
                     
                 </div>
-            </form>
         </tr>
     </table >
     <div class="left_container">
-        <form action="./index.php" method="POST">
+        
             <div class="left_nav">
                 <!-- j'ai trouvé cette strat sur un forum c'est vraiment trop bien, en gros c'est le bouton
                 c'est un href qui appelle un input invisible donc comme un input submit-->
@@ -73,7 +72,7 @@
                 <a href='#' onclick='document.getElementById("supprimer_compte").submit()'>Supprimer compte</a>
                 
             </div>
-        </form>
+        
     </div>
 
     <div class="center_container">
