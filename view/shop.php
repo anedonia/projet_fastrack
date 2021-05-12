@@ -11,7 +11,7 @@
 <body>
 <table>
     <tr>
-        <form action="./index.php" method="POST">
+        
             <div class="topnav">
 
 
@@ -43,7 +43,7 @@
                 <a href='#' onclick='document.getElementById("sign_out").submit()'>Sign Out</a>
                 
             </div>
-        </form>
+        
     </tr>
     <tr class='tr1'>
         
