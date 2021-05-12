@@ -64,4 +64,71 @@ function affichage_item($id_image, $titre, $prix, $description){
     return $affichage;
 }
 
+//je me désolidarise du code au-dessus
+
+//à commenter
+function commande_existe($id_user)
+{
+    $bdd = db_connect();
+
+    $sql = 'SELECT id_commande FROM commande where id_user = ? and total is null';     //le total n'est set que quand on passe la commande (filtrage)
+
+    $req = $bdd -> prepare ($sql);
+    $req->execute([$id_user]);
+
+    $data = $req->fetch();
+
+    if (isset ($data["id_commande"]))
+    {
+       return intval($data["id_commande"]); 
+    }
+    else 
+    {
+        return null;
+    }
+}
+
+function commande_nb($id_user)
+{
+    $bdd = db_connect();
+
+    $sql = 'SELECT id_commande FROM commande where id_user = ? and total is null';     //le total n'est set que quand on passe la commande (filtrage)
+
+    $req = $bdd -> prepare ($sql);
+    $req->execute([$id_user]);
+
+    $data = $req->fetch();
+
+    return intval($data["id_commande"]); 
+}
+
+//à commenter
+function ajout_ligne_com($id_musique, $id_commande)
+{
+    $bdd = db_connect();
+
+    $data = [
+        'idmusique' => $id_musique,
+        'idcommande' => $id_commande
+    ];
+
+    $sql = 'INSERT INTO ligne_commande (id_musique,id_commande,quantite,prix,etat) 
+    VALUES (:idmusique,:idcommande,1,
+    (SELECT prix FROM stock where id_musique = :idmusique),
+    "wait")';     
+
+    $req = $bdd -> prepare ($sql) ;
+    $req->execute($data);
+}
+
+function commande_create($id_user)
+{
+    $bdd = db_connect();
+
+    $sql = 'INSERT INTO commande (id_user) VALUES (?);';     
+
+    $req = $bdd -> prepare ($sql);
+    $req->execute([$id_user]);
+
+}
 ?>
