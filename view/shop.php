@@ -9,7 +9,7 @@
     <title><?= $title ?></title>
 </head>
 <body>
-<table>
+<table class="tab2">
     <tr>
         
             <div class="topnav">
@@ -43,7 +43,37 @@
                 <a href='#' onclick='document.getElementById("sign_out").submit()'>Sign Out</a>
                 
             </div>
+</table> 
+    <div class="left_container">
+            
+            <div class="left_nav">
+                <!-- j'ai trouvé cette strat sur un forum c'est vraiment trop bien, en gros c'est le bouton
+                c'est un href qui appelle un input invisible donc comme un input submit-->
+
+                <form id="voir_achat" action="./index.php" method='GET'>
+                    <input type="hidden" name="action" value="voir_achat"/>
+                </form>
+                <a href='#' onclick='document.getElementById("voir_achat").submit()'>Achats</a>
+
+                <form id="cart" action="./index.php" method='GET'>
+                    <input type="hidden" name="action" value="cart"/>
+                </form>
+                <a href='#' onclick='document.getElementById("cart").submit()'>Cart</a>
+
+                <form id="modifier_profil" action="./index.php" method='GET'>
+                    <input type="hidden" name="action" value="modifier_profil"/>
+                </form>
+                <a href='#' onclick='document.getElementById("modifier_profil").submit()'>Modifier profil</a>
+
+                <form id="supprimer_compte" action="./index.php" method='GET'>
+                    <input type="hidden" name="action" value="supprimer_compte"/>
+                </form>
+                <a href='#' onclick='document.getElementById("supprimer_compte").submit()'>Supprimer compte</a>
+                
+            </div>
         
+    </div>
+<table>       
     </tr>
     <tr class='tr1'>
         
@@ -53,5 +83,6 @@
         
     </tr>
 </table>
+
 </body>
 </html>
