@@ -16,9 +16,17 @@ if(isset($_GET['ajout']))
     //si une commande est en cours
     if(null !== (commande_existe($_SESSION['id_user'])))
     {
+        if (test_doublon(commande_nb($_SESSION['id_user']),$_GET['id']))
+        {
+            update_ligne(commande_nb($_SESSION['id_user']),$_GET['id']);
+        }
+        else 
+        {
         //echo "boucle commande existe ", commande_nb($_SESSION['id_user']);
         ajout_ligne_com($_GET['id'],commande_nb($_SESSION['id_user']));
+        }
     }
+
     //si une commande n'existe pas encore 
     else 
     {

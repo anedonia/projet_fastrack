@@ -131,4 +131,35 @@ function commande_create($id_user)
     $req->execute([$id_user]);
 
 }
+
+function test_doublon($id_commande,$id_musique)
+{
+    $bdd = db_connect();
+
+    $sql = 'SELECT id_ligne_commande from ligne_commande where id_commande = ? and id_musique = ?';     
+
+    $req = $bdd -> prepare ($sql);
+    $req->execute([$id_commande,$id_musique]);
+
+    $data = $req->fetch();
+
+    if (isset ($data["id_ligne_commande"]))
+    {
+       return true; 
+    }
+    else 
+    {
+        return false;
+    }
+}
+
+function update_ligne($id_commande,$id_musique)
+{
+    $bdd = db_connect();
+
+    $sql = 'UPDATE ligne_commande set quantite = quantite+1  where id_commande = ? and id_musique = ?';     
+
+    $req = $bdd -> prepare ($sql);
+    $req->execute([$id_commande,$id_musique]);
+}
 ?>
