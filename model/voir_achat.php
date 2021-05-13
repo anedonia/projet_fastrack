@@ -28,16 +28,20 @@
         $data = $req->fetchAll();
         return $data;        
     }
+    
+    //fonction qui return le titre / quantité / le prix de chauqe ligne commande sous forme de tab assoc
     function contenu_commande($id_commande)
     {
         $bdd = db_connect();
 
-        $sql = 'SELECT 
-                (select titre from stock where id_musique = id_musique) 
-            as titre, quantite ,prix 
+        $sql = 'SELECT id_musique as target,(
+            SELECT titre 
+            from stock 
+            where id_musique = target) as titre,
+            quantite ,prix 
 
             from ligne_commande 
-            where id_commande = ?';     //le total n'est set que quand on passe la commande (filtrage)
+            where id_commande = ?';
 
         $req = $bdd -> prepare ($sql) ;
         $req->execute([$id_commande]);

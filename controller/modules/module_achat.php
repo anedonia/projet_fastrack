@@ -19,7 +19,7 @@ function commande_show($commande)
     {
         array_push($tab_html,
             "<tr>
-                <td> commande : ".$commande[$i]['id_commande']."</td>
+                <td> commande : ".$commande[$i]['titre']."</td>
                 <td> moyen de paiement : ".$commande[$i]['paiement']." </td> 
                 <td> Total commande : ".$commande[$i]['total']." € </td> 
             </tr>");

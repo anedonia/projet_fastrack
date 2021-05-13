@@ -20,17 +20,15 @@
     {
         $bdd = db_connect();
 
-        $sql = 'SELECT (
-        select titre 
-        from stock 
-        where id_musique = id_musique) as titre, 
-        quantite, prix 
-
-        from ligne_commande 
-        where etat = "wait" and id_commande =(
-        SELECT id_commande 
-        from commande 
-        where id_user= ? and total is null)';     //le total n'est set que quand on passe la commande (filtrage)
+        $sql = 'SELECT id_musique as target,(
+            SELECT titre from stock where id_musique = target) as titre 
+            ,quantite,prix 
+            from ligne_commande 
+            where etat = "wait" and id_commande =( 
+            SELECT id_commande 
+            from commande 
+            where id_user= ? 
+            and total is null)';     //le total n'est set que quand on passe la commande (filtrage)
 
         $req = $bdd -> prepare ($sql) ;
         $req->execute([$user_id]);
@@ -38,3 +36,18 @@
         $data = $req->fetchAll();
         return $data;        
     }
+
+
+    function titre_musique($id_musique)
+    {
+        $bdd = db_connect();
+
+        $sql = 'SELECT titre FROM stock where id_musique = ?';     //le total n'est set que quand on passe la commande (filtrage)
+
+        $req = $bdd -> prepare ($sql) ;
+        $req->execute([$id_musique]);
+
+        $data = $req->fetch();
+        return $data;        
+    }
+    
