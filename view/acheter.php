@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href=<?= $page_css ?> rel="stylesheet">
-    <title><?= $title ?></title>
+    <link href="./public/style_profil.css" rel="stylesheet">
+    <link href="./public/acheter.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <title>acheter</title>
 </head>
 <body>
-<table class="tab2">
+<table class="tab2"id='header' >
     <tr>
         
-            <div class="topnav">
+            <div class="topnav" id='header'>
 
 
                 <!-- j'ai trouvé cette strat sur un forum c'est vraiment trop bien, en gros c'est le bouton
@@ -73,16 +76,52 @@
             </div>
         
     </div>
-<table>       
-    </tr>
-    <tr class='tr1'>
-        
-        <div class="grid">
-            <?= $content ?>
-        </div>
-        
-    </tr>
-</table>
 
+       
+    <?= $html_cart ?>
+
+    <div class="center_container">
+    <div class="col-75">
+        <div class="container">
+        <form action="./index.php" method="GET">
+        
+            <div class="col-50">
+                <h3>Payment</h3>
+                <label for="fname">Accepted Cards</label>
+                <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                </div>
+                <label for="cname">Name on Card</label>
+                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                <label for="ccnum">Credit card number</label>
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                <label for="expmonth">Exp Month</label>
+                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                <div class="row">
+                <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+                </div>
+            </div>
+            
+            </div>
+            <input class="btn" type="submit" value="acheter" name="action" class="btn">
+        </form>
+        </div>
+    </div>
+
+<script>
+
+
+
+</script>
 </body>
 </html>

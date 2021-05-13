@@ -52,6 +52,9 @@ session_start();
 				case  'about.php':
 					include("./view/inscription.php");
 					break;
+				case  'acheter':
+					include("./controller/acheter.php");
+					break;
 				default :
 					include("./controller/login.php");
 			}

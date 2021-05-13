@@ -83,11 +83,11 @@
 
     <div class="lol">
             <form action="./index.php" method='GET'>
-                <input class="pure-button" type="submit" id='submit' value='Vider' name ='action'>
+                <input class="pure-button" type="submit" id='submit' value='vider' name ='action'>
             </form>
 
             <form action="./index.php" method='GET'>
-                <input class="pure-button" type="submit" id='submit' value='Acheter' name ='action'>
+                <input class="pure-button" type="submit" id='submit' value='acheter' name ='action'>
             </form>
         </div>
 
