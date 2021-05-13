@@ -102,3 +102,11 @@ color: white;
 .user_info tr:nth-child(odd) {
  background-color: #fff;
 }
+
+.lol {
+  display: flex;
+  flex-direction:row;
+  text-align: center;
+  justify-content: space-evenly;
+  margin: 3em;
+}

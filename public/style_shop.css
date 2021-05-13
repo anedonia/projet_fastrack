@@ -173,6 +173,7 @@ html {
   display: flex;
   flex-direction:column;
   text-align: center;
+
 }
 
 
@@ -192,3 +193,9 @@ html {
 .user_info tr:nth-child(odd) {
  background-color: #fff;
 }
+
+.game {
+    display: flex;
+    padding: 3em;
+}
+

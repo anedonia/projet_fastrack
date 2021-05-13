@@ -34,7 +34,10 @@
         $req->execute([$user_id]);
 
         $data = $req->fetchAll();
+        
         return $data;        
+        
+        
     }
 
 

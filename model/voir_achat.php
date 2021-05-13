@@ -15,7 +15,7 @@
         }
     }
 
-    //fonction qui return le titre / quantité / le prix de chauqe ligne commande sous forme de tab assoc
+    //fonction qui return le id_commande / paiment / total de toutes les commandes d'un user sous forme de tab assoc
     function commande($user_id)
     {
         $bdd = db_connect();
@@ -28,8 +28,8 @@
         $data = $req->fetchAll();
         return $data;        
     }
-    
-    //fonction qui return le titre / quantité / le prix de chauqe ligne commande sous forme de tab assoc
+
+    //fonction qui return le titre / quantité / le prix des lignes com pour une commande donnée(sous forme de tab assoc)
     function contenu_commande($id_commande)
     {
         $bdd = db_connect();
