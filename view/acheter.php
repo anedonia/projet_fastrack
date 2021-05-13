@@ -114,6 +114,7 @@
             
             </div>
             <input class="btn" type="submit" value="acheter" name="action" class="btn">
+            <input type="hidden" name="confirmation" value="yes"/>
         </form>
         </div>
     </div>
