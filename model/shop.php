@@ -42,6 +42,17 @@ function encoded_image($id_image){
     return $tab[0]["image"];
 }
 
+function encoded_son($id_image){
+    $pdo = db_connect();
+    $req = $pdo->prepare('select `son` from `stock` where id_musique=?');
+    $req->setFetchMode(PDO::FETCH_ASSOC);
+    $req->execute(array($id_image));
+    $tab=$req->fetchAll();
+    //echo $tab[0]["bin"];
+    var_dump($tab);
+    return $tab[0]["son"];
+}
+
 //  attention ce qui va suivre est illegal, à ne surtout pas reproduire a la maison
 function affichage_item($id_image, $titre, $prix, $description){
     $onclick = 'document.getElementById('.$id_image.').submit()';
