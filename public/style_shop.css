@@ -34,10 +34,11 @@ body {
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  background-color: rgb(181, 181, 181);
 }
 
 .grid {
+  font-size: 40%;
   display: flex;
   justify-content: start;
   align-content: start;
@@ -197,4 +198,12 @@ html {
 .game {
     display: flex;
     padding: 3em;
+}
+#search_bar {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+margin-top: 2em;
 }

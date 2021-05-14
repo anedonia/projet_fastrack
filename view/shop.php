@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
     <link href=<?= $page_css ?> rel="stylesheet">
     <title><?= $title ?></title>
 </head>
@@ -41,6 +42,8 @@
                     <input type="hidden" name="action" value="sign_out"/>
                 </form>
                 <a href='#' onclick='document.getElementById("sign_out").submit()'>Sign Out</a>
+
+                
                 
             </div>
 </table> 
@@ -72,6 +75,13 @@
                 
             </div>
         
+    </div>
+    
+    <div>
+                <form class="pure-form" id="search_bar" action="./index.php" method='GET'>
+                    <input type="text" class="pure-input-rounded" name="search"/>
+                    <button type="submit" class="pure-button" name="action" value="shop">Search</button>
+                </form>
     </div>
 <table>       
     </tr>
