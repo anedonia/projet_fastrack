@@ -20,7 +20,7 @@
     {
         $bdd = db_connect();
 
-        $sql = 'SELECT id_commande,paiement,total FROM `commande` where id_user = ? and total is not null';     //le total n'est set que quand on passe la commande (filtrage)
+        $sql = 'SELECT id_commande,total FROM `commande` where id_user = ? and total is not null';     //le total n'est set que quand on passe la commande (filtrage)
 
         $req = $bdd -> prepare ($sql) ;
         $req->execute([$user_id]);
