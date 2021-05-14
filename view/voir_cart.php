@@ -83,7 +83,8 @@
 
     <div class="lol">
             <form action="./index.php" method='GET'>
-                <input class="pure-button" type="submit" id='submit' value='vider' name ='action'>
+                <input class="pure-button" type="submit" id='submit' value='vider' name ='vider'>
+                <input type="hidden" name="action" value="cart"/>
             </form>
 
             <form action="./index.php" method='GET'>

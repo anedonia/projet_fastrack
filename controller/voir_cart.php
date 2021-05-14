@@ -6,7 +6,7 @@ if (empty($_SESSION['id_user'])){
 require_once('./model/voir_cart.php');
 require_once('modules/module_cart.php');
 
-$cart = formulation_cart($_SESSION['id_user']);
+
 
 //c'est ultra buggé ne pas toucher 
 
@@ -39,6 +39,22 @@ if ($_SESSION['role'] !== "vendeur")
     $content = "";
 }
 
+//conditions de supression du panier (pas de la commande)
+if(isset($_GET['vider']))
+{
+    //si une commande est en cours
+    if(null !== (commande_existe($_SESSION['id_user'])))
+    {
+        vider_commande(commande_nb($_SESSION['id_user']));
+        unset($_GET['vider']);
+    }
+    else 
+    {
+    // message erreur 
+    }    
+}
+
+$cart = formulation_cart($_SESSION['id_user']);
 
 $html_cart = show_cart($cart);
 

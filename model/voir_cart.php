@@ -53,4 +53,50 @@
         $data = $req->fetch();
         return $data;        
     }
-    
+   
+
+    function vider_commande($id_commande)
+    {
+        $bdd = db_connect();
+
+        $sql = 'DELETE from ligne_commande where id_commande = ?';     //le total n'est set que quand on passe la commande (filtrage)
+
+        $req = $bdd -> prepare ($sql);
+        $req->execute([$id_commande]);
+    }
+
+
+    function commande_existe($id_user)
+{
+    $bdd = db_connect();
+
+    $sql = 'SELECT id_commande FROM commande where id_user = ? and total is null';     //le total n'est set que quand on passe la commande (filtrage)
+
+    $req = $bdd -> prepare ($sql);
+    $req->execute([$id_user]);
+
+    $data = $req->fetch();
+
+    if (isset ($data["id_commande"]))
+    {
+       return intval($data["id_commande"]); 
+    }
+    else 
+    {
+        return null;
+    }
+}
+
+function commande_nb($id_user)
+{
+    $bdd = db_connect();
+
+    $sql = 'SELECT id_commande FROM commande where id_user = ? and total is null';     //le total n'est set que quand on passe la commande (filtrage)
+
+    $req = $bdd -> prepare ($sql);
+    $req->execute([$id_user]);
+
+    $data = $req->fetch();
+
+    return intval($data["id_commande"]); 
+}

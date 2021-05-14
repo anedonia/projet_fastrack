@@ -15,39 +15,7 @@
     return intval($data["total"]); 
 }
 //à commenter
-function commande_existe($id_user)
-{
-    $bdd = db_connect();
 
-    $sql = 'SELECT id_commande FROM commande where id_user = ? and total is null';     //le total n'est set que quand on passe la commande (filtrage)
-
-    $req = $bdd -> prepare ($sql);
-    $req->execute([$id_user]);
-
-    $data = $req->fetch();
-
-    if (isset ($data["id_commande"]))
-    {
-       return intval($data["id_commande"]); 
-    }
-    else 
-    {
-        return null;
-    }
-}
-function commande_nb($id_user)
-{
-    $bdd = db_connect();
-
-    $sql = 'SELECT id_commande FROM commande where id_user = ? and total is null';     //le total n'est set que quand on passe la commande (filtrage)
-
-    $req = $bdd -> prepare ($sql);
-    $req->execute([$id_user]);
-
-    $data = $req->fetch();
-
-    return intval($data["id_commande"]); 
-}
 
 
 
@@ -69,7 +37,6 @@ function update_commande($id_commande,$total,$paiement)
         'cartenom' => $paiement['cardname']
     ];
 
-    echo $paiement['cvv'];
 
     $sql = 'UPDATE commande set 
     total= :total,
