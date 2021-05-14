@@ -36,9 +36,28 @@ if(isset($_GET['ajout']))
     }
 }
 
+if (isset($_GET['search']))
+{
+    $mots = explode(" ",$_GET['search']);
 
-$stock = bdd('SELECT * FROM `stock`');
+    //on enleve les espaces en trop 
+    foreach($mots as $key => $value)
+    {
+        if ($value == "")
+        {
+            unset($mots[$key]);
+        }
+    }
 
+    print_r($mots);
+    echo "<br>";
+    var_dump($mots);
+    //$stock = search_result($_GET['search']);
+}
+else
+{
+    $stock = bdd('SELECT * FROM `stock`');
+}
 ob_start();
 
 foreach ($stock as $track){
