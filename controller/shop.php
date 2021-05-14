@@ -42,7 +42,8 @@ $stock = bdd('SELECT * FROM `stock`');
 ob_start();
 
 foreach ($stock as $track){
-    echo affichage_item($track['id_musique'], $track['titre'], $track['prix'], $track['description']);
+    
+    echo affichage_item($track['id_musique'], $track['titre'], $track['prix'], $track['description'], son_preview($track['id_musique']));
 }
 
 $content = ob_get_clean();
