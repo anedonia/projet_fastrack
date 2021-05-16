@@ -55,7 +55,7 @@ html {
 .grid {
   display: grid;
   grid-gap: 6rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 30rem));
+  grid-template-columns: repeat(auto-fit, minmax(20px, 20rem));
   align-items: start;
 }
 @media (max-width: 60em) {
