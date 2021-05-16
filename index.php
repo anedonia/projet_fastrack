@@ -46,7 +46,7 @@ session_start();
 				case  'voir_vente':
 					include("./controller/voir_vente.php");
 					break;
-				case  'mettre_en_vente':
+				case  'mettre_vente':
 					include("./controller/mettre_en_vente.php");
 					break;
 				case  'about.php':
