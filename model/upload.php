@@ -46,7 +46,7 @@ function ajout_musique($image, $son, $nom, $auteur, $descrption, $prix){
         echo'musique added';
     }
 }
-
+//https://www.youtube.com/watch?v=MIZbGSXeWWE
 function ajout_auteur($auteur){
     $array = bdd('SELECT * FROM `auteur`');
     $search = FALSE;
