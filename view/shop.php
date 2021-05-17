@@ -68,11 +68,6 @@
                 </form>
                 <a href='#' onclick='document.getElementById("modifier_profil").submit()'>Modifier profil</a>
 
-                <form id="mettre_vente" action="./index.php" method='GET'>
-                    <input type="hidden" name="action" value="mettre_vente"/>
-                </form>
-                <a href='#' onclick='document.getElementById("mettre_vente").submit()'>Mettre en vente</a>
-
                 <form id="supprimer_compte" action="./index.php" method='GET'>
                     <input type="hidden" name="action" value="supprimer_compte"/>
                 </form>
