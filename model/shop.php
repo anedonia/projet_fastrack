@@ -190,4 +190,25 @@ function update_ligne($id_commande,$id_musique)
     $req = $bdd -> prepare ($sql);
     $req->execute([$id_commande,$id_musique]);
 }
+
+function search_result($mot)
+{
+    
+    $bdd = db_connect();
+
+    $sql = 'SELECT id_musique, titre,prix,description
+    from stock 
+    LEFT join fait_par on stock.id_musique = fait_par.id_musique_2 
+    left JOIN auteur on fait_par.id_auteur = auteur.id_auteur 
+    where titre like CONCAT("%", ? , "%")
+    OR nom like CONCAT("%", ? , "%") ';     
+
+    $req = $bdd -> prepare ($sql);
+    $req->execute([$mot,$mot]);
+
+    $data = $req->fetchAll();
+
+    return $data;
+}
+//['mot' => '"%'.$mot.'%"']
 ?>

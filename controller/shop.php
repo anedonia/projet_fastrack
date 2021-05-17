@@ -3,7 +3,8 @@ if (empty($_SESSION['id_user'])){
     header('Location: index.php');
     exit();
 }
-require('.\model\shop.php');
+require_once('model\shop.php');
+require('modules/module_shop.php');
 $page_css = "\"./public/style_shop.css\"";
 $title = "Shop";
 //echo affichage_items(8, 'lunedefiel', 99.99, "la baise");
@@ -36,8 +37,16 @@ if(isset($_GET['ajout']))
     }
 }
 
-if (isset($_GET['search']))
+
+
+if (isset($_GET['search']) && $_GET['search'] == "")
 {
+    $stock = bdd('SELECT id_musique, titre,prix,description FROM `stock`');
+
+}
+else if (isset($_GET['search']))
+{
+    //var_dump($_GET['search']);
     $mots = explode(" ",$_GET['search']);
 
     //on enleve les espaces en trop 
@@ -49,18 +58,23 @@ if (isset($_GET['search']))
         }
     }
 
-    print_r($mots);
-    echo "<br>";
-    var_dump($mots); 
-    //$stock = search_result($_GET['search']);
+    $stock = [];
+
+    foreach($mots as $key => $value)
+    {
+        $i++;
+        $stock[$i] =  search_result($value);
+    }
+    print_r($stock);
 }
 else
 {
-    $stock = bdd('SELECT * FROM `stock`');
+    $stock = bdd('SELECT id_musique, titre,prix,description FROM `stock`');
 }
+ //$stock = bdd('SELECT id_musique, titre,prix,description FROM `stock`');
 
 
-$stock = bdd('SELECT * FROM `stock`');
+
 ob_start();
 
 foreach ($stock as $track){
