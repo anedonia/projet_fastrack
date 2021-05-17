@@ -55,6 +55,9 @@ session_start();
 				case  'acheter':
 					include("./controller/acheter.php");
 					break;
+				case  'upload':
+					include("./controller/upload.php");
+					break;
 				default :
 					include("./controller/login.php");
 			}
