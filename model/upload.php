@@ -33,7 +33,6 @@ function bdd($requete){
 
 function ajout_musique($image, $son, $nom, $auteur, $descrption, $prix){
     $array = bdd('SELECT `titre` FROM `stock`');
-    var_dump($array);
     $search = FALSE;
     foreach($array as $value){
         if ($value['titre'] == $nom){
@@ -50,7 +49,6 @@ function ajout_musique($image, $son, $nom, $auteur, $descrption, $prix){
 
 function ajout_auteur($auteur){
     $array = bdd('SELECT * FROM `auteur`');
-    var_dump($array);
     $search = FALSE;
     foreach($array as $value){
         if ($value['nom'] == $auteur){
