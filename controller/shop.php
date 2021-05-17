@@ -22,8 +22,8 @@ if(isset($_GET['ajout']))
         }
         else 
         {
-        //echo "boucle commande existe ", commande_nb($_SESSION['id_user']);
-        ajout_ligne_com($_GET['id'],commande_nb($_SESSION['id_user']));
+            //echo "boucle commande existe ", commande_nb($_SESSION['id_user']);
+            ajout_ligne_com($_GET['id'],commande_nb($_SESSION['id_user']));
         }
     }
 
@@ -51,13 +51,16 @@ if (isset($_GET['search']))
 
     print_r($mots);
     echo "<br>";
-    var_dump($mots);
+    var_dump($mots); 
     //$stock = search_result($_GET['search']);
 }
 else
 {
     $stock = bdd('SELECT * FROM `stock`');
 }
+
+
+$stock = bdd('SELECT * FROM `stock`');
 ob_start();
 
 foreach ($stock as $track){

@@ -67,7 +67,9 @@ function son_preview($id_son){
     return $listeff;
 }
 
+
 //  attention ce qui va suivre est illegal, à ne surtout pas reproduire a la maison
+//https://youtu.be/5KmMMeDakTA
 function affichage_item($id_image, $titre, $prix, $description, $preview_son){
     $onclick = 'document.getElementById('.$id_image.').submit()';
     $affichage = '
