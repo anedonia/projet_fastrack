@@ -62,10 +62,10 @@ else if (isset($_GET['search']))
 
     foreach($mots as $key => $value)
     {
-        $i++;
-        $stock[$i] =  search_result($value);
+        
+    $stock = search_result($value);
     }
-    print_r($stock);
+    //print_r($stock);
 }
 else
 {
