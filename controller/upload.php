@@ -19,8 +19,8 @@ if (!empty($_POST['valider'])){
         ajout_musique(file_get_contents($_FILES['image']['tmp_name']), file_get_contents($_FILES['son']['tmp_name']), $_POST['nom'], $_POST['auteur'], $_POST['description'], $_POST['prix']);
         ajout_auteur($_POST['auteur']);
         ajout_fait_par($_POST['nom'], $_POST['auteur']);
-        //header('Location: index.php?action=account');
-        //exit();
+        header('Location: index.php?action=account');
+        exit();
     }
     else{
         ob_start();
