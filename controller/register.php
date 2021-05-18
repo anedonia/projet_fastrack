@@ -1,5 +1,5 @@
 <?php
-
+//https://youtu.be/GXMLyRyvixQ
 if(!empty($_GET['password']) AND !empty($_GET['username'])){
     require('model\register.php');
     $prenom = 'antonin';
