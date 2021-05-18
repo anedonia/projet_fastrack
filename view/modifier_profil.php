@@ -68,7 +68,7 @@
                 </form>
                 <a href='#' onclick='document.getElementById("voir_vente").submit()'>Ventes</a>
 
-                <form id="Upload" action="./index.php" method='GET'>
+                <form id="upload" action="./index.php" method='GET'>
                     <input type="hidden" name="action" value="upload"/>
                 </form>
                 <a href='#' onclick='document.getElementById("upload").submit()'>Upload</a>
