@@ -42,19 +42,17 @@ if ($_SESSION['role'] !== "vendeur")
     $content = "";
 }
 
-
-
 //conditions d'achats et actions d'achat
-if (isset($_GET['confirmation']))
+if (isset($_POST['confirmation']))
 {
     //si une commande est en cours
     if(null !== (commande_existe($_SESSION['id_user'])))
     {
-        if (paiment_is_full($_GET))
+        if (paiment_is_full($_POST))
         {
             //cryptage_info_paiement($_GET);
-            update_commande(commande_nb($_SESSION['id_user']),total_com(commande_nb($_SESSION['id_user'])),cryptage_info_paiement($_GET));
-            unset($_GET['confirmation']);
+            update_commande(commande_nb($_SESSION['id_user']),total_com(commande_nb($_SESSION['id_user'])),cryptage_info_paiement());
+            unset($_POST['confirmation']);
             $_GET['achat_done']="yes";
         }
         else 

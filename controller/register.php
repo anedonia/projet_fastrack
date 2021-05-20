@@ -25,15 +25,13 @@ if(!empty($_GET['password']) AND !empty($_GET['username'])){
         setcookie('account_created', True, time()+20);
         header('Location: index.php');
     }
-    
+
     //sinon on lui indique les champs à changer
     else 
     {
         $err = err_to_string($_GET['err']);
         require('view\register.php');
     }
-    
-    
 }
 else{
     $page_css = "\"./public/style_login.css\"";

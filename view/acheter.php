@@ -83,7 +83,7 @@
     <div class="center_container">
     <div class="col-75">
         <div class="container">
-        <form action="./index.php" method="GET">
+        <form action="" method="POST">
         
             <div class="col-50">
                 <h3>Payment</h3>
@@ -97,13 +97,13 @@
                 <label for="cname">Name on Card</label>
                 <input type="text" id="cname" name="cardname" placeholder="John More Doe">
                 <label for="ccnum">Credit card number</label>
-                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111222233334444">
                 <label for="expmonth">Exp Month</label>
-                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                <input type="text" id="expmonth" name="expmonth" placeholder="MM">
                 <div class="row">
                 <div class="col-50">
                     <label for="expyear">Exp Year</label>
-                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                    <input type="text" id="expyear" name="expyear" placeholder="YYYY">
                 </div>
                 <div class="col-50">
                     <label for="cvv">CVV</label>

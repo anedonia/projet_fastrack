@@ -5,7 +5,7 @@ function paiment_is_full()
     $full=true;
     foreach(array("cardname","cardnumber","expmonth","expyear","cvv") as $key)
     {
-        if (empty($_GET[$key]))
+        if (empty($_POST[$key]))
         {
             $full = false;
         }
@@ -27,7 +27,7 @@ function cryptage_info_paiement()
         // iv - encrypt method AES-256-CBC expects 16 bytes - else you will get a warning
         $iv = substr(hash('sha256', $secret_iv), 0, 16);
 
-        $output = openssl_encrypt ($_GET[$key],"AES-256-CBC",$key_crypt,0,$iv);
+        $output = openssl_encrypt ($_POST[$key],"AES-256-CBC",$key_crypt,0,$iv);
         $info[$key] = base64_encode($output);
 
         /*
