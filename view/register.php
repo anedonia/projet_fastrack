@@ -21,6 +21,7 @@ require('view\header.php');
             <input type="submit" id='submit' value='INSCRIPTION' name ='action'>
         </form>
     </div>
+    <?php echo $err; ?>
 </div>
 <?php
 require('view\footer.php');

@@ -8,4 +8,3 @@
     <link rel="stylesheet" href=<?= $page_css ?> media="screen" type="text/css" />
 </head>
 <body>
-    <?= $content ?>

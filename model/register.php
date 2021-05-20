@@ -15,4 +15,39 @@ function bdd($requete){
         die;
     }
 }
-?>
+
+function db_connect()
+{
+    try
+    {
+        $pdo = new PDO('mysql:host=localhost;dbname=fastrack','root','');
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+        //echo 'connextion réussie';
+        return $pdo;
+    }
+    catch (PDOException $e)
+    {
+        echo "bug lors de la co ac la bdd";
+    }
+}
+
+function id_unique($id)
+{
+    $bdd = db_connect();
+    
+    $sql = 'SELECT COUNT(identifiant) AS id FROM user where identifiant = ? ';     //le total n'est set que quand on passe la commande (filtrage)
+
+    $req = $bdd -> prepare ($sql);
+    $req->execute([$id]);
+
+    $data = $req->fetch();
+
+    if (intval($data["id"]) == 0)
+    {
+       return 0; 
+    }
+    else 
+    {
+        array_push($_GET['err'], 'Le nom d\'utilisation doit etre unique');
+    }
+}

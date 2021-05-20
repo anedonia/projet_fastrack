@@ -38,7 +38,7 @@ if(isset($_GET['ajout']))
 }
 
 
-
+//barre de recherche pour un seul mot 
 if (isset($_GET['search']) && $_GET['search'] == "")
 {
     $stock = bdd('SELECT id_musique, titre,prix,description FROM `stock`');
@@ -71,7 +71,7 @@ else
 {
     $stock = bdd('SELECT id_musique, titre,prix,description FROM `stock`');
 }
- //$stock = bdd('SELECT id_musique, titre,prix,description FROM `stock`');
+//$stock = bdd('SELECT id_musique, titre,prix,description FROM `stock`');
 
 
 
