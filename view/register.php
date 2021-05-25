@@ -18,6 +18,10 @@ require('view\header.php');
             <input type="text" placeholder="Entrer le mot de passe" name="full_name" required>
             <label><b>Mail</b></label>
             <input type="text" placeholder="Entrer votre email" name="email" required>
+            <input type="radio" id="acheteur" name="type_client" value="client" checked>
+            <label for="Acheteur"><b>Acheteur</b></label><br>
+            <input type="radio" id="vendeur" name="type_client" value="vendeur">
+            <label for="vendeur"><b>Vendeur</b></label>
             <input type="submit" id='submit' value='INSCRIPTION' name ='action'>
         </form>
     </div>
