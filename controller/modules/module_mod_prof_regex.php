@@ -13,31 +13,26 @@ function check_register_info($client)
     
     if(!empty($client['prenom'])) 
     {
-        echo 1;
         check_name($client['prenom']);
     }
 
     if(!empty($client['nom'])) 
     {
-        echo 2;
         check_name($client['nom']);
     }
 
     if(!empty($client['identifiant'])) 
     {
-        echo 3;
         check_username($client['identifiant']);
     }
     
     if(!empty($client['mail'])) 
     {
-        echo 4;
         check_mail($client['mail']);
     }
     
     if(!empty($client['mdp']))
     {
-        echo 5;
         check_password($client['mdp']);
     }
     
