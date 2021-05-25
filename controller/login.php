@@ -4,7 +4,7 @@
 
     if (isset($_GET['password']) && $_GET['username'])
     {
-        if (user_check(htmlspecialchars($_GET['password']) ,htmlspecialchars($_GET['username'])))
+        if (user_check($_GET['password'] ,htmlspecialchars($_GET['username'])))
         {
             //echo 'connecté';
 

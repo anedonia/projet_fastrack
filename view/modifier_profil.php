@@ -85,7 +85,10 @@
     <div class="center_container">
         <div class='box1'>
         <?= $content ?>
+        <?php echo $err; ?>
         </div>
+        
+
     </div>
     
 </body>

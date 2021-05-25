@@ -29,10 +29,13 @@ function affichage_modif($prenom, $nom, $identifiant, $mail){
 
 function affichage_connexion(){
     echo'<form action="" method="POST">
+
     <label><b>Identifiant : <b/></label><br>
     <input type="text" name="pseudo"><br><br>
+
     <label><b>Mot de passe : <b/></label><br>
     <input type="text" name="mdp"><br><br>
+    
     <input type="submit" value="verifier">
 </form>';
 }
