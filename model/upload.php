@@ -41,8 +41,8 @@ function ajout_musique($image, $son, $nom, $auteur, $descrption, $prix){
     }
     if ($search == FALSE){
         $pdo = db_connect();
-        $req = $pdo->prepare('INSERT INTO `stock` (`titre`, `prix`, `description`, `son`, `image`, `quantite`) VALUES (?, ?, ?, ?, ?, 1);');
-        $req->execute(array($nom, $prix, $descrption, $son, $image));
+        $req = $pdo->prepare('INSERT INTO `stock` (`titre`, `prix`, `description`, `son`, `image`, `quantite`, `id_user1`) VALUES (?, ?, ?, ?, ?, 1, ?);');
+        $req->execute(array($nom, $prix, $descrption, $son, $image, $_SESSION['id_user']));
         echo'musique added';
     }
 }
@@ -70,7 +70,7 @@ function ajout_fait_par($titre, $auteur){
     $array2 = bdd('SELECT `id_auteur` FROM `auteur` WHERE `nom` = "'.$auteur.'";');
     $id_auteur = $array2[0]['id_auteur'];
     $pdo = db_connect();
-    $req = $pdo->prepare('INSERT INTO `fait_par` (`id_auteur`, `id_musique`) VALUES (?, ?);');
+    $req = $pdo->prepare('INSERT INTO `fait_par` (`id_auteur`, `id_musique_2`) VALUES (?, ?);');
     $req->execute(array($id_auteur, $id_musique));
 }
 ?>
