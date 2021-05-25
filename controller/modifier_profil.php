@@ -69,7 +69,6 @@ if (empty($_COOKIE['auth'])){
         }
         else 
         {
-            print_r($_GET['err']);
             $err = err_to_string($_GET['err']);
         }
     }

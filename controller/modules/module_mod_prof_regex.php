@@ -10,7 +10,6 @@ function check_register_info($client)
         return false;
     }
 
-    print_r($client);
     
     if(!empty($client['prenom'])) 
     {
