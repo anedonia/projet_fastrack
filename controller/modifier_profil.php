@@ -5,7 +5,7 @@ if (empty($_SESSION['id_user'])){
 }
 require('.\model\modifier_profil.php');
 require('modules\module_modifier_profil.php');
-$page_css = "\"./public/style_profil.css\"";
+$page_css = "\"./public/style_modifier_profil.css\"";
 $title = "account";
 $jour_mois = date("m.d.y");
 $heure = date("H:i");
@@ -48,7 +48,7 @@ if (empty($_COOKIE['auth'])){
         }
     }
 ob_start();
-affichage_modif($prenom, $nom, $identifiant, $mdp, $mail);
+affichage_modif($prenom, $nom, $identifiant, $mail);
 $content = ob_get_clean();
 }
 
