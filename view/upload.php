@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./public/style_profil.css" rel="stylesheet">
+    <link href="./public/style_upload.css" rel="stylesheet">
     <title><?= $title ?></title>
 </head>
 <body>
@@ -83,30 +83,31 @@
     </div>
 
     <div class="center_container">
-        <p>Nous sommes le <?= $jour_mois ?> il est <?= $heure ?></p>  
-        <form name='fo' action="" method='post' enctype='multipart/form-data'>
+        <div class='box1'>
+            <form name='fo' action="" method='post' enctype='multipart/form-data'>
 
-            <label>image (300x300px) : </label>
-            <input type="file" name='image'><br><br>
+                <label><b>image (300x300px) : </b></label><br>
+                <input type="file" name='image'><br><br>
 
-            <label>musique : </label>
-            <input type="file" name='son'><br><br>
+                <label><b>musique : </b></label><br>
+                <input type="file" name='son'><br><br>
 
-            <label>Titre : </label>
-            <input type="text" name='nom'><br><br>
+                <label><b>Titre : </b></label><br>
+                <input type="text" name='nom'><br><br>
 
-            <label>Auteur : </label>
-            <input type="text" name='auteur'><br><br>
+                <label><b>Auteur : </b></label><br>
+                <input type="text" name='auteur'><br><br>
 
-            <label>description : </label>
-            <input type="text" name='description'><br><br>
+                <label><b>Description : </b></label><br>
+                <input type="text" name='description'><br><br>
 
-            <label>Prix : </label>
-            <input type="number" name='prix'><br><br>
+                <label><b>Prix : </b></label><br>
+                <input type="number" name='prix'><br><br>
 
-            <input type="submit" name='valider' value='charger'>
-        </form>
-        <?= $content ?>
+                <input type="submit" name='valider' value='charger'>
+            </form>
+            <?= $content ?>
+        </div>
     </div>
     
 </body>
