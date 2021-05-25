@@ -49,7 +49,7 @@ function check_name($username)
     
 }
 
-function check_username($username,)
+function check_username($username)
 {
     $username = trim($username);
     $username = htmlspecialchars($username);

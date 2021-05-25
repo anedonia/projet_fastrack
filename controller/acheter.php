@@ -8,10 +8,11 @@ require_once('./model/voir_cart.php');
 require_once('modules/module_cart.php');
 require_once('./model/acheter.php');
 require_once('modules/module_acheter.php');
+require_once('modules/module_acheter_regex.php');
 
 $cart = formulation_cart($_SESSION['id_user']);
 
-//c'est ultra buggé ne pas toucher 
+ 
 
 
 
@@ -20,7 +21,7 @@ $heure = date("H:i");
 
 $page_css = "\"./public/style_profil.css\"";
 $title = "Cart";
-
+$err = "";
 
 
 //boutons supplémentaires pour le vendeur
@@ -42,23 +43,26 @@ if ($_SESSION['role'] !== "vendeur")
     $content = "";
 }
 
+//print_r($_POST);
 //conditions d'achats et actions d'achat
 if (isset($_POST['confirmation']))
 {
     //si une commande est en cours
     if(null !== (commande_existe($_SESSION['id_user'])))
     {
-        if (paiment_is_full($_POST))
+        if (paiment_is_full($_POST) && check_register_info())  
         {
-            //cryptage_info_paiement($_GET);
             update_commande(commande_nb($_SESSION['id_user']),total_com(commande_nb($_SESSION['id_user'])),cryptage_info_paiement());
             unset($_POST['confirmation']);
             $_GET['achat_done']="yes";
         }
+        if (!paiment_is_full($_POST))
+        {
+            $err = "<li> Les informations ne sont pas complètes </li>";
+        }
         else 
         {
-            //gérer l'erreur du manque d'informations de paiement 
-            //echo "j'ai pas toutes les infos";
+            $err = err_to_string($_GET['err']);
         }
     }
     else 

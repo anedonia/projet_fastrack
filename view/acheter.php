@@ -97,7 +97,7 @@
                 <label for="cname">Name on Card</label>
                 <input type="text" id="cname" name="cardname" placeholder="John More Doe">
                 <label for="ccnum">Credit card number</label>
-                <input type="text" id="ccnum" name="cardnumber" placeholder="1111222233334444">
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111 2222 3333 4444">
                 <label for="expmonth">Exp Month</label>
                 <input type="text" id="expmonth" name="expmonth" placeholder="MM">
                 <div class="row">
@@ -109,20 +109,22 @@
                     <label for="cvv">CVV</label>
                     <input type="text" id="cvv" name="cvv" placeholder="352">
                 </div>
+                    
                 </div>
+                    <ul>
+                        <?php echo $err; ?>
+                    </ul>
             </div>
             
             </div>
-            <input class="btn" type="submit" value="acheter" name="action" class="btn">
+            <input class="btn_lol" type="submit" value="acheter" name="action" class="btn">
             <input type="hidden" name="confirmation" value="yes"/>
+            
         </form>
+
         </div>
+            
     </div>
 
-<script>
-
-
-
-</script>
 </body>
 </html>
