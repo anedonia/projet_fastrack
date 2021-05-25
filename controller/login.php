@@ -4,11 +4,11 @@
 
     if (isset($_GET['password']) && $_GET['username'])
     {
-        if (user_check($_GET['password'] ,$_GET['username']))
+        if (user_check(htmlspecialchars($_GET['password']) ,htmlspecialchars($_GET['username'])))
         {
             //echo 'connecté';
 
-            $client = user_info($_GET['username']);
+            $client = user_info(htmlspecialchars($_GET['username']));
 
             foreach(array('id_user','prenom','nom','identifiant','mail','role') as $key )
             {
