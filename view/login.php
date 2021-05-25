@@ -26,10 +26,6 @@
         </form>
 
         <form action="./index.php" method="GET">
-				<input id='submit' type="submit" value="sign_out" name="action">
-		</form>
-
-        <form action="./index.php" method="GET">
             <input type="submit" id='submit' value='INSCRIPTION' name='action' >
         </form>
     </div>
