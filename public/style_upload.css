@@ -140,6 +140,7 @@ input[type=submit] {
   cursor: pointer;
   width: 25%;
 }
+
 input[type=submit]:hover {
   background-color: #f0f0f0;
   color: #2c2c2c;
