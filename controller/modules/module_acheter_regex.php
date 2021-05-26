@@ -10,6 +10,7 @@ function check_register_info()
     check_exp_year($_POST['expyear']);
     check_exp_month($_POST['expmonth']);
 
+
     if (!empty($_GET['err']))
     {
         return false;
@@ -155,25 +156,14 @@ function check_exp_month($exp_month)
 
     $exp_month = trim($exp_month);
     $exp_month = htmlspecialchars($exp_month);
-    $exp_month = explode(" ",$exp_month);
-
-    //on enleve les espaces en trop (s'il y en a)
-    foreach($exp_month as $key => $value)
-    {
-        if ($value == "")
-        {
-            unset($exp_month[$key]);
-        }
-    }
-    $exp_month = implode($exp_month);
-    $exp_month = intval($exp_month);
-
+    
+    
     if (empty($exp_month)) 
     {
         array_push($_GET['err'], 'Le mois d\'expiration est vide');
         return;
     }
-    elseif (strlen($exp_month) >= 2 ) 
+    elseif (strlen($exp_month) > 2 ) 
     {
         array_push($_GET['err'], 'Le mois d\'expiration ne doit contenir que un ou deux chiffres');
     }
